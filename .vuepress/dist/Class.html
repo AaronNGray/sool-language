@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Classes</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/2.styles.eb1d857a.css" as="style"><link rel="preload" href="/assets/js/app.7ab8955a.js" as="script"><link rel="preload" href="/assets/js/1.089bb0f4.js" as="script"><link rel="prefetch" href="/assets/js/0.388081c4.js">
+    <link rel="stylesheet" href="/assets/css/2.styles.eb1d857a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar-mask"></div><div class="sidebar"><!----><!----></div><div class="page"><div class="content"><h2 id="classes"><a href="#classes" aria-hidden="true" class="header-anchor">#</a> Classes</h2><h3 id="introduction"><a href="#introduction" aria-hidden="true" class="header-anchor">#</a> Introduction</h3><p>Classes are simular to C++'es classes except they can be mapped in a multitude of different ways. Although vtables can be used, for efficiency reasons methods are generally mapped as arrays of pointers to methods that are based on the first declaing class in the heirachy; this mechanism is simular to Eiffel's. Also SOOL classes are much richer in functionality and include for example virtual nested classes allowing a higher level of stucturing of code object relationships through inheritance.</p><p>The following is an example basic point class. Note the use of the <strong>self</strong> reference rather than <strong>this</strong> pointer. <strong>self</strong> is not required normally but is used here to avoid name clashes with simularly named arguments. The <strong>instantiate</strong> keyword which is shown later in this chapter makes instantiation much easier with less code needed. Note unlike C++ that members are public by default.</p><div class="language- extra-class"><pre class="language-text"><code> class point {
+ protected:
+   var x:integer
+   var y:integer
+ public:
+   constructor point(x:integer, y:integer) {
+     self.x = x
+     self.y = y
+   }
+ }
+</code></pre></div><h3 id="members"><a href="#members" aria-hidden="true" class="header-anchor">#</a> members</h3><h4 id="member-types-and-sections"><a href="#member-types-and-sections" aria-hidden="true" class="header-anchor">#</a> member types and sections</h4><div class="language- extra-class"><pre class="language-text"><code> public:
+ protected:
+ private:
+ prohibited:
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> constructors:
+ destructors:
+ methods:
+ messages:
+ interrupts:
+ static:
+ functions:
+ operators:
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> public
+ protected
+ private
+ prohibited
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> constructor
+ destructor
+ method
+ message
+ interrupt
+ static
+ function
+ operator
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> public {
+   ...
+ }
+ protected {
+   ...
+ }
+ private {
+   ...
+ }
+ prohibited {
+   ...
+ }
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> constructors {
+   ...
+ }
+ destructors {
+   ...
+ }
+ methods {
+   ...
+ }
+ messages {
+   ...
+ }
+ interrupts {
+   ...
+ }
+ static {
+   ...
+ }
+ functions {
+   ...
+ }
+ operators {
+   ...
+ }
+</code></pre></div><h5 id="special-member-and-section-types"><a href="#special-member-and-section-types" aria-hidden="true" class="header-anchor">#</a> special member and section types</h5><div class="language- extra-class"><pre class="language-text"><code> runtime:
+   ...
+ compiletime:
+    ...
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> runtime {
+   ...
+ }
+ compiletime {
+   ...
+ }
+</code></pre></div><h4 id="constructors"><a href="#constructors" aria-hidden="true" class="header-anchor">#</a> constructors</h4><p>Constructors maybe named differently than the class they are constructing, but must be qualified in usage by the class name.</p><p>The keyword <strong>constructor</strong> is used rather than in C++ using the class name as the class name actually can polute the classes method name space, for example if the class is the class 'set' then the class would not be able to have a 'set()' method method.</p><h5 id="default-constructor"><a href="#default-constructor" aria-hidden="true" class="header-anchor">#</a> default constructor</h5><p>An implicit default constructor will be defined if there are no other constructors which returns an object with the default values for all its members if there are any members, unless of cause the class is abstract.</p><p><code>constructor () {}</code></p><h5 id="explicit-constuctors"><a href="#explicit-constuctors" aria-hidden="true" class="header-anchor">#</a> explicit constuctors</h5><p>Constructors are exlicit by default and have to be explicitly called unless they are declared implicit.</p><div class="language- extra-class"><pre class="language-text"><code> class int {
+   explicit constructor (long)
+     ....
+ }
+</code></pre></div><p>you may use the implicit or explicit keyword in the definition of the constructor.</p><h5 id="implicit-constructors"><a href="#implicit-constructors" aria-hidden="true" class="header-anchor">#</a> implicit constructors</h5><p>Implicit constructors may be automatically used in type conversions and parameter conversions.</p><div class="language- extra-class"><pre class="language-text"><code> class long {
+   implicit constructor (int)
+ }
+</code></pre></div><h5 id="named-constructors"><a href="#named-constructors" aria-hidden="true" class="header-anchor">#</a> named constructors</h5><p>A named constructor maybe used rather than an explicit constructor.</p><div class="language- extra-class"><pre class="language-text"><code> class int {
+   constructor long(long)
+ }
+</code></pre></div><h5 id="disallowed-constructors"><a href="#disallowed-constructors" aria-hidden="true" class="header-anchor">#</a> disallowed constructors</h5><p>Disallowing a constructor</p><p><code>no constructor bogus ();</code></p><p>Disallowing the default constructor</p><p><code>no constructor ();</code></p><p>This is often done in C++ by making a constructor private, not implementing it and commenting that it should not be implemented. Or in C++11 you can use <code>= delete</code> which is just weird.</p><p><code>final no constructor ();</code></p><p>Means that inheriting classes cannot create a default constructor.</p><h5 id="instatiating-constructors"><a href="#instatiating-constructors" aria-hidden="true" class="header-anchor">#</a> instatiating constructors</h5><div class="language- extra-class"><pre class="language-text"><code> class cartesian {
+   constructor (x = 0, y = 0) instantiate
+ protected:
+   real x
+   real y
+ }
+</code></pre></div><h5 id="constructor-example"><a href="#constructor-example" aria-hidden="true" class="header-anchor">#</a> constructor example</h5><div class="language- extra-class"><pre class="language-text"><code> class cartesian {
+   constructor (x = 0, y = 0) instantiate
+   constructor polar(angle a, real radius)
+   implicit constructor polar(polar p)
+ protected:
+   real x
+   real y
+ }
+  
+ class polar {
+   constructor (angle a, real radius) instatiate
+   constructor cartesian(real x, real y)
+   implicit constructor cartesian(cartesian c)
+ protected:
+   angle a
+   real radius
+ }
+</code></pre></div><h5 id="destructors"><a href="#destructors" aria-hidden="true" class="header-anchor">#</a> destructors</h5><p>Automated 'taredown' for non library classes or arena memory managed objects maybe employed, either on a destructor, class, or module level.</p><h5 id="static-and-non-static-constructors"><a href="#static-and-non-static-constructors" aria-hidden="true" class="header-anchor">#</a> static and non static constructors</h5><p>static constructors are like C++ constructors.</p><p>otherwise constructors are callable from a domain and are like &quot;methods&quot; of that domain.</p><h5 id="public-protected-and-private-constructors"><a href="#public-protected-and-private-constructors" aria-hidden="true" class="header-anchor">#</a> public, protected, and private constructors</h5><p>constructors may have visibility constraints.</p><h5 id="class-constructors-and-destructors"><a href="#class-constructors-and-destructors" aria-hidden="true" class="header-anchor">#</a> class constructors and destructors</h5><p>class constructors and destructors are called on the initialization and deinitilization of the module they are exist within.</p><div class="language- extra-class"><pre class="language-text"><code> class X {
+   ...
+   class constructor () {
+     ...
+   }
+   class destructor () {
+     ...
+   }
+   ...
+ }
+</code></pre></div><p>or</p><div class="language- extra-class"><pre class="language-text"><code> class Y {
+   ...
+   class {
+     constructor () {
+       ...
+     }
+     destructor () {
+       ...
+     }
+   }
+   ...
+ }
+</code></pre></div><h4 id="conversions"><a href="#conversions" aria-hidden="true" class="header-anchor">#</a> conversions</h4><div class="language- extra-class"><pre class="language-text"><code> class cartesian (
+   constructor polar(polar p);
+   implicit converter (polar p) = polar(p);
+   ...
+ };
+ 
+ polar p( 90, 1.0);
+ cartesian c = p;
+</code></pre></div><p>implicit and explicit conversions. Conversion are explicit by default.</p><h4 id="casts"><a href="#casts" aria-hidden="true" class="header-anchor">#</a> casts</h4><p>casts actually convert the type of a variable or expression and keep the same binary value. As they are dangerious and only allowed in systems programmming by importing the System.Platform module and having the correct security permissions.</p><h4 id="instance-variables"><a href="#instance-variables" aria-hidden="true" class="header-anchor">#</a> instance variables</h4><p>Instance variables are common to all objects of a certain class.</p><h5 id="initializers"><a href="#initializers" aria-hidden="true" class="header-anchor">#</a> initializers</h5><p>Instance variables may have default initializers otherwise they will be initialized to the types default initializer value.</p><div class="language- extra-class"><pre class="language-text"><code> class X {
+   var i : integer = 5
+   var s : string = &quot;Hello there !!!\n&quot;
+   ...
+ }
+</code></pre></div><p>more complex initializers maybe used such as initializer lists and templating of initialized values too.</p><h4 id="slots"><a href="#slots" aria-hidden="true" class="header-anchor">#</a> slots</h4><p>Slots are dynamic and like pythons or selfs slots, they can be declared dynamically for dynamic classes or prottype objects.</p><h4 id="new-and-delete"><a href="#new-and-delete" aria-hidden="true" class="header-anchor">#</a> new and delete</h4><p>Simular to C++'es new and delete operators. And may be overriden and specialized or adapted simularly too.</p><h4 id="methods"><a href="#methods" aria-hidden="true" class="header-anchor">#</a> methods</h4><h3 id="virtual-members"><a href="#virtual-members" aria-hidden="true" class="header-anchor">#</a> virtual members</h3><p><strong>virtual</strong> members can be overriden by inheriting classes.</p><h3 id="final-members"><a href="#final-members" aria-hidden="true" class="header-anchor">#</a> final members</h3><p><strong>final</strong> members may not be overriden in inheriting classes or subclassses.</p><h2 id="implicit-members-and-types"><a href="#implicit-members-and-types" aria-hidden="true" class="header-anchor">#</a> implicit members and types</h2><h3 id="self"><a href="#self" aria-hidden="true" class="header-anchor">#</a> self</h3><p><strong>self</strong> is a reference to the containing object.</p><p><code>self.aVariable</code></p><p>allows access to members</p><p>self may also allow access to members when hidden in scope by a parameter :-</p><div class="language- extra-class"><pre class="language-text"><code> class A {
+   method m( a : Int) {
+     self.a = a
+   }
+   var a : Int
+ }
+</code></pre></div><p>Sub objects may also be accessed as an associative array which fits in with the dynamic and prototypical versions of the language, but will also work with meta information / reflection in static implementations.</p><p><code>self[&quot;aVariable&quot;]</code></p><h3 id="self-2"><a href="#self-2" aria-hidden="true" class="header-anchor">#</a> Self</h3><p><strong>Self</strong> is the type of <strong>self</strong>. Which is short hand for <strong>type of self</strong>.</p><p><code>type Self = type of self</code></p><p>or</p><p><code>Self = like self</code></p><p>The following gives access to all the protected methods in a class as an associative array :-</p><p><code>Self[protected method]</code></p><p><strong>Self</strong> is an anchor</p><div class="language- extra-class"><pre class="language-text"><code> class cons(X : any) {
+   var val : X
+   var next : ref Self
+ }
+</code></pre></div><h3 id="super"><a href="#super" aria-hidden="true" class="header-anchor">#</a> super</h3><p><strong>super</strong> is a reference to a classes primary inheriting class.</p><p>Note: This is essentailly the same as Java.</p><h3 id="super-2"><a href="#super-2" aria-hidden="true" class="header-anchor">#</a> Super</h3><p><strong>Super</strong> provides a class with the type/class of its primary inheriting class (from the <strong>extends</strong> clause, or first inherited class), or <strong>Bottom</strong> or <strong>Void</strong> if there is no super class. This is used in the construction of mixins.</p><h3 id="parent"><a href="#parent" aria-hidden="true" class="header-anchor">#</a> parent</h3><p><strong>parent[]</strong> is an array of parent classes. <strong>parent[0]</strong> is equal to <strong>super</strong>.</p><h3 id="parent-2"><a href="#parent-2" aria-hidden="true" class="header-anchor">#</a> Parent</h3><p><strong>Parent[]</strong> is an array of parent class types. <strong>Parent[0]</strong> is equal to <strong>Super</strong>.</p><h3 id="this"><a href="#this" aria-hidden="true" class="header-anchor">#</a> this</h3><p><strong>this</strong>, <strong>pointer</strong> and <strong>unit.address</strong> are only defined if the &quot;Platform.System&quot; package is included.</p><p>It is defined in terms of 'self' as follows :-</p><p><code>this : pointer to Self = self.address</code></p><p><code>this : This = self.address</code></p><h3 id="this-2"><a href="#this-2" aria-hidden="true" class="header-anchor">#</a> This</h3><p><strong>This</strong> is the type of <strong>this</strong>.</p><p><code>type This = pointer to Self</code></p><h2 id="abstract-classes"><a href="#abstract-classes" aria-hidden="true" class="header-anchor">#</a> abstract classes</h2><p>Abstract classes cannot be instatiated directly but can be inherited by other non abstract classes.</p><div class="language- extra-class"><pre class="language-text"><code> abstract class A {
+   ...
+ }
+</code></pre></div><h2 id="anonymous-classes"><a href="#anonymous-classes" aria-hidden="true" class="header-anchor">#</a> anonymous classes</h2><h3 id="anonymous-inner-classes"><a href="#anonymous-inner-classes" aria-hidden="true" class="header-anchor">#</a> anonymous inner classes</h3><div class="language- extra-class"><pre class="language-text"><code> interface Listener {
+   public void event(Event e)
+ }
+ 
+ button.addListener(
+   new Listener {
+     public void event(Event e) {
+       ...
+     }
+   }
+ )
+</code></pre></div><h2 id="nested-classes"><a href="#nested-classes" aria-hidden="true" class="header-anchor">#</a> nested classes</h2><p>Classes maybe nested inside other classes.</p><div class="language- extra-class"><pre class="language-text"><code> class C {
+   private class D {
+     ...
+   }
+ ...
+ }
+</code></pre></div><p>They may also have a visibility modifier as above.</p><h2 id="virtual-classes"><a href="#virtual-classes" aria-hidden="true" class="header-anchor">#</a> virtual classes</h2><div class="language- extra-class"><pre class="language-text"><code> class C {
+   virtual class V {
+     ...
+   }
+ }
+</code></pre></div><p>here class D inherits from class C and extends the virtual class C::V with D's V :-</p><div class="language- extra-class"><pre class="language-text"><code> class D : C {
+   extend virtual class V {
+     ...
+   }
+ }
+</code></pre></div><p>here class E inherits from class C and overrides the virtual class C::V with E's V :-</p><div class="language- extra-class"><pre class="language-text"><code> class E : C {
+   override virtual class V {
+     ...
+   }
+ }
+</code></pre></div><p>here class F::V will be flagged as an error :-</p><div class="language- extra-class"><pre class="language-text"><code> class F : C {
+   virtual class V {
+     ...
+   }
+ }
+</code></pre></div><h2 id="singleton-classes"><a href="#singleton-classes" aria-hidden="true" class="header-anchor">#</a> Singleton classes</h2><p>Singleton or Static classes.</p><div class="language- extra-class"><pre class="language-text"><code> singleton class ASingletonClass {
+   ...
+ } ASingleton
+</code></pre></div><h2 id="extended-classes"><a href="#extended-classes" aria-hidden="true" class="header-anchor">#</a> Extended classes</h2><p>Simular to C#'s extended classes.</p><div class="language- extra-class"><pre class="language-text"><code> import X
+ 
+ extend class X.X {
+   ...
+ }
+</code></pre></div><h2 id="first-class-classes"><a href="#first-class-classes" aria-hidden="true" class="header-anchor">#</a> First class classes</h2><div class="language- extra-class"><pre class="language-text"><code> class a = class {
+   ...
+ }
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> type b(X, Y) = class inherit X {
+   y:Y
+ }
+</code></pre></div><h2 id="generic-classes"><a href="#generic-classes" aria-hidden="true" class="header-anchor">#</a> Generic classes</h2><p>Generic classes allow parametric polymorphism. They are discussed under Generacism.</p><h2 id="templated-classes"><a href="#templated-classes" aria-hidden="true" class="header-anchor">#</a> Templated classes</h2><p>Templated classes are discussed under Templates.</p><h2 id="oof-and-microsoft-com-object-models"><a href="#oof-and-microsoft-com-object-models" aria-hidden="true" class="header-anchor">#</a> OOF and Microsoft COM Object Models</h2><h3 id="oof"><a href="#oof" aria-hidden="true" class="header-anchor">#</a> OOF</h3><p>The Object Oriened Framework is the underlying unifying language support framework that allows static, dynamic, and prototypical languages to be implemented.</p><h3 id="com"><a href="#com" aria-hidden="true" class="header-anchor">#</a> COM</h3><div class="language- extra-class"><pre class="language-text"><code> import COM
+ 
+ class aClass : COM.Class( CLSID=&quot;...&quot;) {
+   interface anInterface : COM.Interface( IID=&quot;...&quot;) {
+     method aMethod():void
+   }
+   interface anotherInterface : COM.Interface( IID=&quot;...&quot;) {
+     method aMethod():void
+   }
+ }
+</code></pre></div><p>COM can also be done as an extension class to an existing OOF class.</p><h2 id="syntax"><a href="#syntax" aria-hidden="true" class="header-anchor">#</a> Syntax</h2><div class="language- extra-class"><pre class="language-text"><code> ClassDeclaration:
+   ClassHead &quot;{&quot; ClassBody &quot;}&quot;
+</code></pre></div><h3 id="non-generic-and-no-signatures"><a href="#non-generic-and-no-signatures" aria-hidden="true" class="header-anchor">#</a> Non Generic and no Signatures</h3><div class="language- extra-class"><pre class="language-text"><code> ClassHead:
+   [&quot;abstract&quot;] &quot;class&quot; ClassName [&quot;by ref&quot; | &quot;by value&quot;] [(&quot;shared&quot; | &quot;repeated&quot;)[&quot;only&quot;]] [&quot;extends&quot; ClassName] [(&quot;:&quot; | &quot;inherit&quot;) [&quot;shared&quot; | &quot;repeated&quot;] ClassName (&quot;,&quot; [&quot;shared&quot; | &quot;repeated&quot;] ClassName)*] [&quot;implements&quot; InterfaceName (&quot;,&quot; InterfaceName)*]
+</code></pre></div><h3 id="generic-and-with-signatures"><a href="#generic-and-with-signatures" aria-hidden="true" class="header-anchor">#</a> Generic and with Signatures</h3><div class="language- extra-class"><pre class="language-text"><code> ClassHead:
+   [&quot;abstract&quot;] &quot;class&quot; ClassName [&quot;by ref&quot; | &quot;by value&quot;] [(&quot;shared&quot; | &quot;repeated&quot;)[&quot;only&quot;]] [&quot;signature&quot; SignatureDefinition] [&quot;extends&quot; TypeDefinition] [(&quot;:&quot; | &quot;inherit&quot;) [&quot;shared&quot; | &quot;repeated&quot;] TypeDefinition (&quot;,&quot; [&quot;shared&quot; | &quot;repeated&quot;] TypeDefinition)*] [&quot;implements&quot; (SignatureDefinition|InterfaceDefinition) (&quot;,&quot; (SignatureDefinition|InterfaceDefinition))*]
+</code></pre></div><h2 id="semantics"><a href="#semantics" aria-hidden="true" class="header-anchor">#</a> Semantics</h2></div><div class="content edit-link"><!----><!----></div><!----></div></div></div>
+    <script src="/assets/js/1.089bb0f4.js" defer></script><script src="/assets/js/app.7ab8955a.js" defer></script>
+  </body>
+</html>

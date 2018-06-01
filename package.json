@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "vuepress": "^0.10.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "eject" : "vuepress eject"
+  }
+}
