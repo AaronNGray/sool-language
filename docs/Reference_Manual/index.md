@@ -61,43 +61,52 @@ Language
 
 [Stereotypes](Stereotypes.md "wikilink")
 
-[Objects](Object.md "wikilink")
+[Objects](Object.md)
 
-[Functions](Function.md "wikilink")
+[Functions](Function.md)
 
-[Operators](Operators.md "wikilink")
+[Operators](Operators.md)
 
-[Methods](Method.md "wikilink")
+[Methods](Method.md)
 
-[Closures](Closure.md "wikilink")
+[Closures](Closure.md)
 
-[Namespaces](Namespace.md "wikilink")
+[Namespaces](Namespace.md)
 
-[Units](Unit.md "wikilink")
+[Units](Unit.md)
 
-[Modules](Module.md "wikilink")
+[Modules](Module.md)
 
-[Packages](Package.md "wikilink")
+[Packages](Package.md)
 
-[Exceptions](Exception.md "wikilink")
+[Exceptions](Exception.md)
 
-[Garbage Collection](Garbage_Collection.md "wikilink")
+[Garbage Collection](Garbage_Collection.md)
 
-[System](System.md "wikilink")
+[System](System.md)
 
-[Processes](Process.md "wikilink")
+[Processes](Process.md)
 
-[Kernel](Kernel.md "wikilink")
+[Kernel](Kernel.md)
 
-[Functional Extensions](Functional_Extensions.md "wikilink")
+[Functional Extensions](Functional_Extensions.md)
 
-[Scripting Extensions](Scripting_Extensions.md "wikilink")
+[Scripting Extensions](Scripting_Extensions.md)
 
-[C++ Compatibility Extensions](C%2B%2B_Compatibilty_Extensions.md "wikilink")
+[C++ Compatibility Extensions](C%2B%2B_Compatibilty_Extensions.md)
 
-[Reflection](Reflection.md "wikilink")
+[Reflection](Reflection.md)
 
-[Prelude](Prelude.md "wikilink")
+[Prelude](Prelude.md)
+
+[Language](Language.md)
+
+[Feature](Feature.md)
+
+[Statement](Statement.md)
+
+[Operator](Operator.md)
+
 
 ### Statements
 
@@ -105,13 +114,13 @@ Statements are expressions returning the type **void**. The also return
 hidden inherent information such as exception handling objects and
 possible debugging information if in debugging mode.
 
-[switch ... case ... default](switch.md "wikilink")
+[switch ... case ... default](switch.md)
 
-[match ... case ... default](match.md "wikilink")
+[match ... case ... default](match.md)
 
-[return](return.md "wikilink")
+[return](return.md)
 
-[yield](yield.md "wikilink")
+[yield](yield.md)
 
 ### Expressions
 
@@ -121,23 +130,23 @@ information.
 
 ### Keywords
 
-[Keywords](Keywords.md "wikilink")
+[Keywords](Keywords.md)
 
 ### Identifiers
 
-[Identifiers](Identifiers.md "wikilink")
+[Identifiers](Identifiers.md)
 
 ### Syntax
 
-[Syntax definition](Syntax.md "wikilink")
+[Syntax definition](Syntax.md)
 
 ### Semantics
 
-[Semantic definition](Semantics.md "wikilink")
+[Semantic definition](Semantics.md)
 
 ### To Do
 
-[To do](To_do.md "wikilink")
+[To do](To_do.md)
 
 Libraries
 ---------
@@ -176,4 +185,4 @@ Python or PHP.
 Examples
 --------
 
-[Examples](Examples.md "wikilink")
+[Examples](Examples.md)

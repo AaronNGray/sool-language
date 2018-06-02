@@ -2,17 +2,17 @@ todo
 
 fixme
 
-warning <int> <string> {uid] [uri]
+warning \<int> \<string> {uid] [uri]
 
-error <int> <string> {uid] [uri]
+error \<int> \<string> {uid] [uri]
 
 warning+fix [uri]
 
-depreciated <string> <error> [uri]
+depreciated \<string> \<error> [uri]
 
-obsolete <string> <construct>
+obsolete \<string> \<construct>
 
-assert <bool> <string> <uri>
+assert \<bool> \<string> \<uri>
 
 require
 

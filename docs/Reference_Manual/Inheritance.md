@@ -1,8 +1,8 @@
-## Inheritance ##
+# Inheritance
 
 Inheritance can be applied to classes, signatures, interfaces, records, variants, datatypes, modules, and packages.
 
-### single inheritance ###
+## single inheritance
 
 Primary inheritance, or extension.
 
@@ -14,7 +14,7 @@ Primary inheritance, or extension.
 
 This is used a mechanism to work with .Net and JVM environments. And also effects v table layout if using v table implementation.
 
-### mixin inheritance ###
+## mixin inheritance
 
 ```
    mixin M uses signature S {
@@ -25,7 +25,7 @@ This is used a mechanism to work with .Net and JVM environments. And also effect
        ...
    }
 ```
-### delegation ###
+## delegation
 deletation using **as** allows another class or object's interface to be added to a class as if it was inherited publically.
 ```
   class A {
@@ -40,19 +40,19 @@ deletation using **as** allows another class or object's interface to be added t
       ...
   }
 ```
-### multiple inheritance ###
+## multiple inheritance
 
-#### The diamond problem ####
+### The diamond problem
 
 The diamond problem in multiple inheritance brings up the ideas of shared and repeated inheritance.
 
-<diagram needed>
+note: diagram needed
 
-#### Shared and Repeated inheritance ####
+### Shared and Repeated inheritance ###
 
 When class A inherits from classes B and C and they inheritfrom a class D. They may either inherit there own copy of class D, this is repeated or structural inheritance or may inherit a common copy of class D, this is shared or virtual (as called in C++) inheritance.
 
-##### Repeated inheritance #####
+#### Repeated inheritance
 ```
    class D repeated {
      ...
@@ -87,7 +87,7 @@ When class A inherits from classes B and C and they inheritfrom a class D. They 
      ...
    }
 ```
-##### Shared inheritance #####
+#### Shared inheritance
 ```
    class D shared {
      ...
@@ -123,7 +123,7 @@ When class A inherits from classes B and C and they inheritfrom a class D. They 
    }
 ```
 
-##### Repeated inheritance declared in parent class #####
+#### Repeated inheritance declared in parent class
 Repeated inheritance is the default an does not need to be explicitly declared.
 ```
    class D {
@@ -142,7 +142,7 @@ Repeated inheritance is the default an does not need to be explicitly declared.
      ...
    }
 ```
-##### Shared inheritance declared in parent class #####
+#### Shared inheritance declared in parent class
 
 This is the same mechanism as in C++ and included for compatibility with C++ declaration and semantics.
 ```
@@ -162,7 +162,7 @@ This is the same mechanism as in C++ and included for compatibility with C++ dec
      ...
    }
 ```
-#### virtual inheritance ####
+### virtual inheritance
 
 Virtual inheritance allows a nested class to be overriden in inheriting classes
 ```
@@ -201,31 +201,30 @@ here class F::V will be flagged as an error :-
    
 ```
 
-### subjects under inheritance ###
+## subjects under inheritance
 
-#### class
+### class
 
-#### signature
+### signature
 
-#### interface
+### interface
 
-#### enumeration
+### enumeration
 
-#### record
+### record
 
-#### variant
+### variant
 
-#### datatype
+### datatype
 
-#### module
+### module
 
-#### package
+### package
 
-## Syntax ##
+# Syntax
 
 *ClassDeclaration* = **class** *ClassName* [ (**shared** | **repeated**)
-[**only**] ] *ClassInheritance* *MixinClause* *ImplementsClause*
-*ClassBody*
+[**only**] ] *ClassInheritance*  *MixinClause*  *ImplementsClause*  *ClassBody*
 
 *ClassInheritance* = [ *ExtendsClause* ] [ *InheritsClause* ]
 
@@ -241,7 +240,6 @@ here class F::V will be flagged as an error :-
 
 *ClassBody* = **{** ... **}**
 
-## Semantics ##
+# Semantics
 
 todo
-

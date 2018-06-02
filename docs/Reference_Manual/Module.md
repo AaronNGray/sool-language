@@ -1,3 +1,5 @@
+# Modules
+
 Modules allow libaries or language extensions to be modularized. Modules may be imported or inherited.
 
 `  import "aModule.module"`
@@ -24,6 +26,6 @@ Or by access notation
 
 `  aModule.aClass.aConstructor(...)`
 
-###Syntax
+# Syntax
 
-###Semantics
+# Semantics
