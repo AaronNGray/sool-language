@@ -1,0 +1,5 @@
+### Syntax
+
+SwitchStatement:
+
+`   "switch" "(" ScalarType ")" "{" .... "}"`

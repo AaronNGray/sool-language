@@ -1,7 +1,3 @@
-# test
+# Documentation
 
-```
-test
-```
-
-[Classes](Class.md)
+[Reference Manual](./Reference_Manual/index.md)
