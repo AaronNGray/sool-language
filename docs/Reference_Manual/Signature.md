@@ -31,8 +31,6 @@ Signatures allow generic and templated objects to be type checked, before instan
  }
 ```
 
-Signatures maybe "instantiated" as traits. This is done by the trait inheriting the signature or signatures.
-
 ###
 
 ```
@@ -66,6 +64,10 @@ dynamic usage
    ...
 ```
 where S is a module or a namespace or trait or signature.
+
+### Inheritance
+
+Signatures maybe "instantiated" as traits. This is done by the trait inheriting the signature or signatures.
 
 ## Implementation
 
