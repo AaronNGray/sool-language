@@ -11,8 +11,6 @@ Signatures are like traits but unlike traits they are implicit, non atomic, and 
 
 Signatures allow generic and templated objects to be type checked, before instantiation.
 
-Signatures maybe "instantiated" as traits. This is done by the trait inheriting the signature or signatures.
-
 ```
  signature Comparable(T) {
    operator > (lhs:T, rhs:T):bool
@@ -32,6 +30,9 @@ Signatures maybe "instantiated" as traits. This is done by the trait inheriting 
    return a > b ? a : b
  }
 ```
+
+Signatures maybe "instantiated" as traits. This is done by the trait inheriting the signature or signatures.
+
 ###
 
 ```
