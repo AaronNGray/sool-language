@@ -1,6 +1,6 @@
 ## Signatures
 
-Signatures are like interfaces but unlike interfaces they are non atomic, and non manifest.
+Signatures are like interfaces but unlike interfaces they are implicit, non atomic, and non manifest.
 
 ```
  signature aSig {
