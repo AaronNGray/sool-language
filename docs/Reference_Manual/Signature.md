@@ -67,7 +67,7 @@ where S is a module or a namespace or trait or signature.
 
 ### Inheritance
 
-Signatures maybe "instantiated" as traits. This is done by the trait inheriting the signature or signatures.
+Signatures maybe "instantiated" as traits. This is done by the trait inheriting or implmenting the signature or signatures.
 
 ## Implementation
 
