@@ -1,4 +1,4 @@
-##Signatures
+## Signatures
 
 Signatures are like interfaces but unlike interfaces they are non atomic, and non manifest.
 
@@ -44,7 +44,7 @@ Signatures maybe "instantiated" as interfaces. This is done by the interface inh
  signature Sortable(T is OrderedCollection of Comparable)
 ```
 
-##has and optional keywords
+## has and optional keywords
 ```
  signature aSignature {
    optional method anOptionalMethod() { ... }
@@ -64,20 +64,20 @@ dynamic usage
    if C has method anOptionalMethod { ... }
    ...
 ```
-##Implementation
+## Implementation
 
 **optional** and **has** keywords can be implemented easily staticly. The dynamic **if** case has much reduced overhead in implementing classes compared to full reflective meta class information. Implementation of **has** is reduced to a referencing a **boolean** in the class object heirachy in the dynamic case and normalizes out as a constant in the static case.
 
-##Influences
+## Influences
 
 Adding the **optional** keyword to signatures and **has** keyword to conditionals was influenced by The D Language.
 
-##History
+## History
 As far as I know signatures come from Robin Milner's Standard ML (Meta Language).
 *They should have been in C++ as soon as its warped generacism stroke templating was introduced.*
 
-##Syntax
+## Syntax
 
 
-##Semantics
+## Semantics
 
