@@ -1,4 +1,4 @@
-##Methods
+## Methods
 
 ### overloading
 ```
@@ -133,7 +133,7 @@ explicit declaration of **this**
  }
 ```
 
-##Syntax
+## Syntax
 
 
-##Semantics
+## Semantics
