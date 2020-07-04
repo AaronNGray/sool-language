@@ -1,7 +1,7 @@
-## Ownership ##
+## Ownership
 Ownership, lifetime, and burrowing semantics for SOOL.
 
-### Class Member Ownership ###
+### Class Member Ownership
 Here classs A owns b of class B
 ```
  class A {
@@ -9,9 +9,9 @@ Here classs A owns b of class B
     ....
  }
 ```
-### Class Instance Ownership ###
+### Class Instance Ownership
 Here class A owns all its members.
-````
+```
  class A owner {
      var b:B
      var c:C
@@ -20,15 +20,16 @@ Here class A owns all its members.
 
 **not** **owner** may be used for exceptions under normal full class member ownership.
 
-### Semantics ###
-#### Move Semantics ####
+### Semantics
+
+#### Move Semantics
 Move semantics can be acertained by usage.
-#### Copy Semantics ####
+#### Copy Semantics
 Copy semantics needs to be looked at.
-#### Lifetime analysis ####
+#### Lifetime analysis
 Lifetimes can be established by usage and the traditional compiler technique of dataflow analysis.
 
-### Lifetimes ###
+### Lifetimes
 Lifetimes will generally be established by scope.
 ```
  function f() {
@@ -60,11 +61,11 @@ Here since v's ownership is not passed out of the function it can be established
 
 Use after free can also be established by dataflow analysis on references.
 
-## Syntax ##
+## Syntax
 
-## Semantics ##
+## Semantics
 
-## Notes ##
+## Notes
 Rust's capture of passed variables seems a little dictotorial and overzelous at the least. Converting or using existing code and algorithms in Rust could be difficult as a result.
 
 One of the main aims of SOOL is to allow both transcription of existing code and algorithms from existing sources and semantic subsumption of existing code.
