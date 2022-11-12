@@ -63,7 +63,7 @@ function f(t:T): T { ... }
 
 ## has and optional keywords
 ```
- concept aSignature {
+ concept aConcept {
    optional method anOptionalMethod() { ... }
    ...
  }
