@@ -3,7 +3,7 @@
 Concepts are like interfaces but unlike interfaces they are implicit, non atomic, and non manifest.
 
 ```
- concept aSig {
+ concept aConcept {
    method aMethod( i:int):void;
    method anotherMethod():int;
  };
@@ -24,7 +24,24 @@ Concepts maybe "instantiated" as interfaces. This is done by the interface inher
    return a > b ? a : b
  }
 ```
-
+### implicit types
+```
+concept C {
+  type T;
+  method m(t:T):T
+  ...
+};   
+```
+### explicit generic types
+```
+generic (type T)
+function f(t:T): T { ... }
+```
+### implicit generic types
+```
+generic {type T}
+function f(t:T): T { ... }
+```
 ### ... is ...
 
 ```
