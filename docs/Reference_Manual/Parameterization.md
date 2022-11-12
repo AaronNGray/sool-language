@@ -26,6 +26,23 @@ The following are all equivalent
 ```
 
 #### generic class
+```
+generic (type T)
+class C {
+  method m(t:T):T {
+    ...
+  }
+}
+```
+#### generic concept
+```
+generic (type T)
+concept C {
+  method m(t:T):T {
+    ...
+  }
+}
+```
 
 ### implicit parameterization
 
@@ -44,6 +61,14 @@ This is simular to C++ function templates.
 generic 
 class C {
   type T;
+  method m(t:T):T {
+    ...
+  }
+}
+```
+```
+generic {type T}
+class C {
   method m(t:T):T {
     ...
   }
