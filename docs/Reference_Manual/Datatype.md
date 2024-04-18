@@ -41,4 +41,4 @@ This can also be augmented by a functional interface.
 ```
 ## Generalized Algebraic Data Types (GADT's)
 
-GADT's will not be implemented in the first implementations due to their complexity.
+GADT's will not be implemented in the first implementations due to their complexity, and inability to normalize their model properly.
