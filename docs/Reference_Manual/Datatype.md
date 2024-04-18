@@ -36,7 +36,7 @@ This can also be augmented by a functional interface.
 ```
  datatype d inherits a, b, c {
    transform(...) { ... }
-   lower<T>() { ... }
+   lower<T>():T { ... }
  }
 ```
 ## Generalized Algebraic Data Types (GADT's)
