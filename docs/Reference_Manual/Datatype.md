@@ -4,7 +4,7 @@
 
 ## Parameterized Algebraic Data Types (PADT's)
 
-`  datatype list(T) = nil | cons(T, List(T))`
+`  datatype list(T) = nil | cons(T, list(T))`
 
 ## Augmented datatypes
 ```
