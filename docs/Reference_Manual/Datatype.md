@@ -6,7 +6,7 @@
 
 `  datatype list(T) = nil | cons(T, List(T))`
 
-## Augmenting datatypes
+## Augmented datatypes
 ```
  datatype a = A {
    x() { ... }
