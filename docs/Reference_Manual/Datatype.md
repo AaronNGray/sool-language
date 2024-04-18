@@ -22,12 +22,23 @@
 ```
 
 ## Inheriting datatypes
+Here datatype *d* inherits *a* and adds sub type *D*.
 ```
  datatype d inherits a = D {
    ...
  }
 ```
-Datatype *d* inherits *a* and adds sub type *D*.
+Datatype multiple inheritance allows composition of a number of datatypes.
+```
+ datatype d inherits a, b, c
+```
+This can also be augmented by a functional interface.
+```
+ datatype d inherits a, b, c {
+   transform(...) { ... }
+   lower<T>() { ... }
+ }
+```
 ## Generalized Algebraic Data Types (GADT's)
 
 GADT's will not be implemented in the first implementations due to their complexity.
