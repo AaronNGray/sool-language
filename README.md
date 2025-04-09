@@ -1,4 +1,4 @@
-# SOOL - Simple/Sophisticated/Static Object Orientated Language
+# SOOL - Simple/Sophisticated/Static Object Oriented Language
 
 SOOL is designed to be an othoganally complete normalized semantic superset of all the major Object Oriented Languages. 
 
