@@ -1,3 +1,4 @@
+# struct
 ```
 type struct {
 compiletime:
@@ -19,7 +20,7 @@ runtime:
 }
 
 type value object (T subtype of object) {
-completime:
+compiletime:
     constructor (value : T) instatiate
     constructor (ref : ref T) { value = ref }
     getter() : Object
@@ -47,7 +48,7 @@ type ref (T subtype of any) {
     ....
 }
 
-type ref (T subtype of Any) {
+type Ref (T subtype of Any) {
     ....
 }
 
