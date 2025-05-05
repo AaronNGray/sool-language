@@ -46,7 +46,7 @@ refine type range(any) {
 v "is" t = is(t:Type)(v:T):boolean = typeof v == t
 ```
 ```
-predicate scalar = subtype of Scalar
+type scalar = subtype of Scalar
 ```
 
 
