@@ -12,7 +12,7 @@ datatype T =
   | C(a:A, c:C)
 ```
 #### Anonymous or unnamed datatype members
-Anonymous or unnamed datatype members are a normalization of the space of datatypes for use with pattern matching. 
+Anonymous or unnamed datatype members are a normalization or unification of the space of datatypes with tuple space as used in pattern matching. 
 ```
 datatype T =
   (a:A)
