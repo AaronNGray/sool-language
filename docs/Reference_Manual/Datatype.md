@@ -86,7 +86,7 @@ datatype T =
 ```
 **datatype**s may have implicit semantic tagging behaviour
 ```
-type d inherits Type<T>.Index =
+type d inherits Type(T).Index =
   A : index(0) (a:A)
   | : index(1) B(a:A, b:B)
   | : index(2) C(a:A, c:C)
