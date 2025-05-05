@@ -19,7 +19,7 @@ datatype T =
   | (a:A, b:B)
   | (a:A, c:C)
 ```
-These fit in with both the pattern matching implementation and the imlementation of MetaMorphosis with the unnamed parser generation grammar rules and their matching.
+These fit in with both the pattern matching implementation and the implementation of MetaMorphosis with the unnamed parser generation grammar rules and their matching.
 
 ## Parameterized Algebraic Data Types (PADT's)
 Parameterized Algebraic Data Types are syntatic sugar for generic parameterization.
