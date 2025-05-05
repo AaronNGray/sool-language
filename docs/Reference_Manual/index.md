@@ -3,110 +3,109 @@ Language
 
 ### Constructs
 
-[Base Types](Base_Types.md "wikilink")
+[Base Types](Base_Types)
 
-[References](Reference.md "wikilink")
+[References](Reference)
 
-[Pointers](Pointer.md "wikilink")
+[Pointers](Pointer)
 
-[Ranges](Range.md "wikilink")
+[Ranges](Range)
 
-[Iterators](Iterator.md "wikilink")
+[Iterators](Iterator)
 
-[Arrays](Array.md "wikilink")
+[Arrays](Array)
 
-[Lists](List.md "wikilink")
+[Lists](List)
 
-[Sets](Set.md "wikilink")
+[Sets](Set)
 
-[Dictionaries](Dictionary.md "wikilink")
+[Dictionaries](Dictionary)
 
-[Enumerations](Enumeration.md "wikilink")
+[Enumerations](Enumeration)
 
-[Optional](Optional.md "wikilink")
+[Optional](Optional)
 
-[Records](Record.md "wikilink")
+[Records](Record)
 
-[Variants](Variant.md "wikilink")
+[Variants](Variant)
 
-[Structs](Struct.md "wikilink")
+[Structs](Struct)
 
-[Unions](Union.md "wikilink")
+[Unions](Union)
 
-[Classes](Class.md "wikilink")
+[Classes](Class)
 
-[Types](Type.md "wikilink")
+[Types](Type)
 
-[Mixins](Mixin.md "wikilink")
+[Mixins](Mixin)
 
-[Datatypes](Datatype.md "wikilink")
+[Datatypes](Datatype)
 
-[Tuples](Tuple.md "wikilink")
+[Tuples](Tuple)
 
-[Domains](Domain.md "wikilink")
+[Domains](Domain)
 
-[Dynamic](Dynamic.md "wikilink")
+[Dynamic](Dynamic)
 
-[Inheritance](Inheritance.md "wikilink")
+[Inheritance](Inheritance)
 
-[Interfaces](Interface.md "wikilink")
+[Interfaces](Interface)
 
-[Signatures](Signature.md "wikilink")
+[Signatures](Signature)
 
-[Genericism](Genercism.md "wikilink")
+[Genericism](Genercism)
 
-[Templates](Templates.md "wikilink")
+[Templates](Templates)
 
-[Macros](Macros.md "wikilink")
+[Macros](Macros)
 
-[Stereotypes](Stereotypes.md "wikilink")
+[Stereotypes](Stereotypes)
 
-[Objects](Object.md)
+[Objects](Object)
 
-[Functions](Function.md)
+[Functions](Function)
 
-[Operators](Operators.md)
+[Operators](Operators)
 
-[Methods](Method.md)
+[Methods](Method)
 
-[Closures](Closure.md)
+[Closures](Closure)
 
-[Namespaces](Namespace.md)
+[Namespaces](Namespace)
 
-[Units](Unit.md)
+[Units](Unit)
 
-[Modules](Module.md)
+[Modules](Module)
 
-[Packages](Package.md)
+[Packages](Package)
 
-[Exceptions](Exception.md)
+[Exceptions](Exception)
 
-[Garbage Collection](Garbage_Collection.md)
+[Garbage Collection](Garbage_Collection)
 
-[System](System.md)
+[System](System)
 
-[Processes](Process.md)
+[Processes](Process)
 
-[Kernel](Kernel.md)
+[Kernel](Kernel)
 
-[Functional Extensions](Functional_Extensions.md)
+[Functional Extensions](Functional_Extensions)
 
-[Scripting Extensions](Scripting_Extensions.md)
+[Scripting Extensions](Scripting_Extensions)
 
-[C++ Compatibility Extensions](C%2B%2B_Compatibilty_Extensions.md)
+[C++ Compatibility Extensions](C%2B%2B_Compatibilty_Extensions)
 
-[Reflection](Reflection.md)
+[Reflection](Reflection)
 
-[Prelude](Prelude.md)
+[Prelude](Prelude)
 
-[Language](Language.md)
+[Language](Language)
 
-[Feature](Feature.md)
+[Feature](Feature)
 
-[Statement](Statement.md)
+[Statement](Statement)
 
-[Operator](Operator.md)
-
+[Operator](Operator)
 
 ### Statements
 
@@ -114,13 +113,13 @@ Statements are expressions returning the type **void**. The also return
 hidden inherent information such as exception handling objects and
 possible debugging information if in debugging mode.
 
-[switch ... case ... default](switch.md)
+[switch ... case ... default](switch)
 
-[match ... case ... default](match.md)
+[match ... case ... default](match)
 
-[return](return.md)
+[return](return)
 
-[yield](yield.md)
+[yield](yield)
 
 ### Expressions
 
@@ -130,23 +129,27 @@ information.
 
 ### Keywords
 
-[Keywords](Keywords.md)
+[Keywords](Keywords)
 
 ### Identifiers
 
-[Identifiers](Identifiers.md)
+[Identifiers](Identifiers)
 
 ### Syntax
 
-[Syntax definition](Syntax.md)
+[Syntax definition](Syntax)
 
 ### Semantics
 
-[Semantic definition](Semantics.md)
+[Semantic definition](Semantics)
 
 ### To Do
 
-[To do](To_do.md)
+[To do](To_do)
+
+### Talk
+
+[Talk](Talk)
 
 Libraries
 ---------
@@ -185,4 +188,4 @@ Python or PHP.
 Examples
 --------
 
-[Examples](Examples.md)
+[Examples](Examples)
