@@ -1,3 +1,4 @@
+# Data Types
 ## Algebraic Data Types (ADT's)
 ### Introduction
 
@@ -11,6 +12,9 @@ datatype T =
   | B(a:A, b:B)
   | C(a:A, c:C)
 ```
+### Pattern Matching
+[match ... case ... default](match)
+
 #### Anonymous or unnamed datatype members
 Anonymous or unnamed datatype members are a normalization or unification of the space of datatypes with tuple space as used in pattern matching. 
 ```
