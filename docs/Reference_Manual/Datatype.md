@@ -91,9 +91,9 @@ datatype T =
 **datatype**s may have implicit semantic tagging behaviour
 ```
 type d inherits Type(T).Index =
-  A : index(0) (a:A)
-  | : index(1) B(a:A, b:B)
-  | : index(2) C(a:A, c:C)
+  A : index(0), (a:A)
+  | B : index(1), (a:A, b:B)
+  | C : index(2), (a:A, c:C)
 ```
 maps to a virtual class implementation
 
