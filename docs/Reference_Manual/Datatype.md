@@ -1,6 +1,7 @@
 # Data Types
 ## Algebraic Data Types (ADT's)
 ### Introduction
+Algebraic Data Types allow the representation of data as a set of alternative structual forms. They may be pimariliy be used to represent Abstract Syntax Trees for the representation of programs. For example Statements and Expressions. They may utilize recursion and mutual recustion between multiple Algebraic Data Types.
 
 ### Constructors
 ```
@@ -78,7 +79,7 @@ datatype d inherits a, b, c {
 
 ## Generalized Algebraic Data Types (GADT's)
 
-GADT's will not be implemented in the first implementations due to their complexity, and inability to normalize their model properly.
+GADT's will not be implemented in the first implementations due to their complexity, and inability to normalize their model properly using initial algebras.
 
 ## Implementation
 This shows the implementation of ADT's by lower onto [virtual classes](Class.md#virtual-classes).
@@ -96,7 +97,6 @@ type d inherits Type(T).Index =
   | C : index(2), (a:A, c:C)
 ```
 maps to a virtual class implementation
-
 ```
 class T {
   virtual class A {
