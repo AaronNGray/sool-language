@@ -1,7 +1,7 @@
 ## C++ Compatibility Extensions
 
 ### Introduction
-It is intended as an extension to SOOL to allow C++ code to be both translated and C++ modules to be imported. This requires dealing with the sematics and pragmatics of the C++ Language. This requires for post transalted code either to convert and "markup" paramter types or to allow koenig lookup to be specified for SOOL code. And also to allow both the calling of C++ code using koenig lookup and SOOL code that has been specified as using koenig lookup.
+It is intended as an extension to SOOL to allow C++ code to be both translated and C++ modules to be imported. This requires dealing with the sematics and pragmatics of the C++ Language. Requiring for post translated code either to allow koenig lookup to be specified by keyword for the SOOL code or to convert and "markup" parameter types. This will allow both the calling of C++ code using koenig lookup and SOOL code that has been specified as using koenig lookup.
 
 ### Koenig lookup
 ```
