@@ -31,9 +31,9 @@ The following is an example basic point class. Note the use of the **self** refe
  destructors:
  methods:
  messages:
- interrupts:
  static:
  functions:
+ interrupts:
  operators:
 ```
 ```
@@ -389,6 +389,14 @@ Abstract classes cannot be instatiated directly but can be inherited by other no
    ...
  }
 ```
+### abstract members
+Abstract methods may contain abstract members as well as concrete ones.
+```
+ abstract class A
+   abstract method aMethod():boolean;
+   ...
+ }
+``` 
 ## anonymous classes
 
 ### anonymous inner classes
