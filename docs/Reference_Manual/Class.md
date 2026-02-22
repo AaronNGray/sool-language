@@ -390,12 +390,15 @@ Abstract classes cannot be instatiated directly but can be inherited by other no
  }
 ```
 ### abstract members
-Abstract methods may contain abstract members as well as concrete ones.
+Abstract classes may contain abstract members as well as concrete ones.
 ```
  abstract class A
+   abstract var v;
    abstract method aMethod():boolean;
    ...
  }
+
+Abstract variables and constants may abstract the type to be defined in inheriting classes.
 ``` 
 ## anonymous classes
 
@@ -469,7 +472,7 @@ here class F::V will be flagged as an error :-
 Singleton or Static classes.
 
 ```
- singleton class ASingletonClass {
+A singleton class ASingletonClass {
    ...
  } ASingleton
 ```
