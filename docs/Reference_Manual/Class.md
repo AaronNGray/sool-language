@@ -1,7 +1,7 @@
 # Classes
 
 ## Introduction
-Classes are simular to C++'es classes except they can be mapped in a multitude of different ways. Although vtables can be used, for efficiency reasons methods are generally mapped as arrays of pointers to methods that are based on the first declaing class in the heirachy; this mechanism is simular to Eiffel's. Also SOOL classes are much richer in functionality and include for example virtual nested classes allowing a higher level of stucturing of code object relationships through inheritance.
+Classes are simular to C++'es classes except they can be mapped in a multitude of different ways. SOOL classes are much richer in functionality than most languages and include for example virtual nested classes allowing a higher level of stucturing of code object relationships through inheritance.
 
 The following is an example basic point class. Note the use of the **self** reference rather than **this** pointer. **self** is not required normally but is used here to avoid name clashes with simularly named arguments. The **instantiate** keyword which is shown later in this chapter makes instantiation much easier with less code needed. Note unlike C++ that members are public by default.
 
@@ -23,8 +23,8 @@ The following is an example basic point class. Note the use of the **self** refe
 ```
  public:
  protected:
- private:
  prohibited:
+ private:
 ```
 ```
  constructors:
@@ -545,3 +545,7 @@ COM can also be done as an extension class to an existing OOF class.
    ["abstract"] "class" ClassName ["by ref" | "by value"] [("shared" | "repeated")["only"]] ["signature" SignatureDefinition] ["extends" TypeDefinition] [(":" | "inherit") ["shared" | "repeated"] TypeDefinition ("," ["shared" | "repeated"] TypeDefinition)*] ["implements" (SignatureDefinition|InterfaceDefinition) ("," (SignatureDefinition|InterfaceDefinition))*]
 ```
 ## Semantics
+
+## Implementation
+
+On polymorphic dispatch for efficiency reasons methods are generally mapped as arrays of pointers to methods indexed by type to allow callsite polymorphism as a single indexed lookup. These sets of array to pointers to methods are constructed based on the whole class heirachy. This mechanism is simular to Eiffel's implementation and is faster than vtables on modern processors. Although vtables may be used in cases for binary compatibility with C++, for both library code and also COM and DCOM. 
