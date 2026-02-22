@@ -123,7 +123,7 @@ An implicit default constructor will be defined if there are no other constructo
 
 #### explicit constuctors
 
-Constructors are exlicit by default and have to be explicitly called unless they are declared implicit.
+Constructors are explicit by default and have to be explicitly called unless they are declared implicit.
 ```
  class int {
    explicit constructor (long)
