@@ -534,15 +534,21 @@ COM can also be done as an extension class to an existing OOF class.
  ClassDeclaration:
    ClassHead "{" ClassBody "}"
 ```
-### Non Generic and no Signatures
 ```
  ClassHead:
-   ["abstract"] "class" ClassName ["by ref" | "by value"] [("shared" | "repeated")["only"]] ["extends" ClassName] [(":" | "inherit") ["shared" | "repeated"] ClassName ("," ["shared" | "repeated"] ClassName)*] ["implements" InterfaceName ("," InterfaceName)*]
+   ["abstract"] "class" ClassName SharedOrRepeated InheritsClause ImplementsClause
 ```
-### Generic and with Signatures
 ```
- ClassHead:
-   ["abstract"] "class" ClassName ["by ref" | "by value"] [("shared" | "repeated")["only"]] ["signature" SignatureDefinition] ["extends" TypeDefinition] [(":" | "inherit") ["shared" | "repeated"] TypeDefinition ("," ["shared" | "repeated"] TypeDefinition)*] ["implements" (SignatureDefinition|InterfaceDefinition) ("," (SignatureDefinition|InterfaceDefinition))*]
+ ClassName:
+   Identifier
+ SharedOrRepeated:
+   [("shared" | "repeated")["only"]]
+ ByRefOrByValue:
+   ["by ref" | "by value"]
+ InheritsClause:
+   [(":" | "inherit" | "extends") ["shared" | "repeated"] ClassName ("," ["shared" | "repeated"] ClassName)*]]
+ ImplementsClause:
+   ["implements" InterfaceName ("," InterfaceName)*]
 ```
 ## Semantics
 
