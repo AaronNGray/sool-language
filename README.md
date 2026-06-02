@@ -4,4 +4,4 @@ SOOL is designed to be an othoganally complete normalized semantic superset of a
 
 [Documentation](./docs/index.md)
 
-Overall concept and constructions of compositie ideas and syntatic constructs owned and Copyright Aaron N Gray, 1995-2025
+Overall concept and constructions of compositie ideas and syntatic constructs owned and Copyright Aaron N Gray, 1995-2026
